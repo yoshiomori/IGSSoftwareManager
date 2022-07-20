@@ -20,7 +20,7 @@
     <tr>
         <td>{{ employee.name }}</td>
         <td>{{ employee.email }}</td>
-        <td>{{ employee.department }}</td>
+        <td>{{ employee.department|default_if_none:'' }}</td>
     </tr>
     {% endfor %}
     </tbody>
