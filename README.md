@@ -18,4 +18,4 @@ In order to run IGS-Software Manager, execute this commands in terminal:
 
 ```$ python manage.py runserver```
 
-Follow the postman [tutorial](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-postman-data) to import gsi.postman_collection.json.
+Follow the postman [tutorial](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-postman-data) to import gsi.postman_collection.json, use gsi.postman_collection.json as a base to do your own tests.
