@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.views import generic
 
-# Create your views here.
+from information.models import Employ
+
+
+class EmployListView(generic.ListView):
+    model = Employ
