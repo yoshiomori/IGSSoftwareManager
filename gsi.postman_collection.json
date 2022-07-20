@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "a58f015d-0a4a-4b71-a31c-5864c6578439",
+		"name": "gsi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4626683"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1/employee/",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "yourpass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "yoshio.mori",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/employee/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post /employee/",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "yourpass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "yoshio.mori",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "One More Top",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "one@more.top",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "Top",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/employee/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post /employee/ Last",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "yourpass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "yoshio.mori",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Last More Top",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "Last@more.top",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "Last",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/employee/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put /employee/",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "yourpass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "yoshio.mori",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Top, One More",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "one@more.top",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "Top",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/employee/5/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"employee",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put /employee/ Last",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "yourpass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "yoshio.mori",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Last, One More",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "last@more.top",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "Last",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/employee/6/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"employee",
+						"6",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

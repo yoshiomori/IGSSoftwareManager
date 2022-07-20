@@ -21,6 +21,11 @@ class DepartmentViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
 
 
+def set_department_in_validated_data(validated_data):
+    department = validated_data['department']
+    validated_data['department'], created = getattr(Department, 'objects').get_or_create(**department)
+
+
 class EmployeeSerialize(serializers.ModelSerializer):
     department = serializers.CharField(source='department.name')
 
@@ -29,9 +34,12 @@ class EmployeeSerialize(serializers.ModelSerializer):
         fields = ['name', 'email', 'department']
 
     def create(self, validated_data):
-        department = validated_data['department']
-        validated_data['department'], created = getattr(Department, 'objects').get_or_create(**department)
-        return getattr(Employee, 'objects').create(**validated_data)
+        set_department_in_validated_data(validated_data)
+        return super().create(validated_data)
+
+    def update(self, instance, validated_data):
+        set_department_in_validated_data(validated_data)
+        return super().update(instance, validated_data)
 
 
 class EmployeeViewSet(viewsets.ModelViewSet):
