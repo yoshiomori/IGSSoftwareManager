@@ -45,4 +45,14 @@ class EmployeeSerialize(serializers.ModelSerializer):
 class EmployeeViewSet(viewsets.ModelViewSet):
     queryset = getattr(Employee, 'objects').all()
     serializer_class = EmployeeSerialize
-    permission_classes = [IsAuthenticated]
+
+    def get_permissions(self):
+        """
+        Instantiates and returns the list of permissions that this view requires.
+        """
+        if self.action != 'list':
+            permission_classes = [IsAuthenticated]
+        else:
+            permission_classes = []
+        return [permission() for permission in permission_classes]
+
