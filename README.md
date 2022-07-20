@@ -12,7 +12,7 @@ In order to run IGS-Software Manager, execute this commands in terminal:
 
 ```$ python manage.py migrate```
 
-```$ python manage.py createsuperuser``` *creates a superuser account to be able to use [admin site](http://127.0.0.1/admin) and update gsi.postman_collection.json with authentication data*
+```$ python manage.py createsuperuser``` *creates a superuser account to be able to use [admin site](http://127.0.0.1:8000/admin) and update gsi.postman_collection.json with authentication data*
 
 ```$ python manage.py loaddata information``` *searches and loads the contents into database*
 
