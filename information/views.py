@@ -27,7 +27,7 @@ def set_department_in_validated_data(validated_data):
 
 
 class EmployeeSerialize(serializers.ModelSerializer):
-    department = serializers.CharField(source='department.name')
+    department = serializers.CharField(source='department.name', allow_null=True)
 
     class Meta:
         model = Employee
