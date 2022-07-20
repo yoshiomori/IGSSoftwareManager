@@ -2,6 +2,10 @@
 ## Introduction
 An application to manage employee information, such as name, e-mail, and departament.
 
+## Requirements
+* Python 3.8 or greater
+
+```$ pip install -r requirements.txt```
 
 ## Get started 
 In order to run IGS-Software Manager, execute this commands in terminal:
